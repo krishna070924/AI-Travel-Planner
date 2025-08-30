@@ -1,0 +1,9 @@
+#!/bin/sh
+'''exec' "/Users/krishna/Documents/College/Semester 7/GAI/Lab 6/.venv/bin/python" "$0" "$@"
+' '''
+import sys
+from oslo_policy.generator import convert_policy_json_to_yaml
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(convert_policy_json_to_yaml())
